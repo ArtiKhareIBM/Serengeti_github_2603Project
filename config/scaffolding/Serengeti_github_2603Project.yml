@@ -14,22 +14,74 @@ packages:
   gitUsername: ArtiKhareIBM
   gitBranch: main
 - name: InvalidPackage
+  version: "1.0"
   gitServerName: srcGithubCtrl_Arti
   gitUrl: https://github.com/ArtiKhareIBM
   gitUsername: ArtiKhareIBM
   gitBranch: main
 - name: EmployeePayroll
+  version: "1.0"
   gitServerName: srcCtrl_AzRepo_Arti
   gitUrl: https://dev.azure.com/y508839/EmployeePayroll/_git
   gitUsername: y508839
   gitBranch: main
 services:
+- serviceName: project.serengeti_github_2603.integrations:azrepoPackage
+  packages:
+  - name: Serengeti_github_2603Project
+    version: "1.0"
+  - name: EmployeePayroll
+    version: "1.0"
+  - name: InvalidPackage
+    version: "1.0"
+  - name: CurrentDatePackage
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+- serviceName: EmployeePayroll.services:calculateMonthlySalary
+  packages:
+  - name: EmployeePayroll
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+- serviceName: pub.flow:debugLog
+  packages:
+  - name: WmPublic
+    version: 11.1.0.0.2043
+- serviceName: EmployeePayroll.services:calculateSalary
+  packages:
+  - name: EmployeePayroll
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+- serviceName: EmployeePayroll.connectorServices:insertEmployeeMonthlySal
+  packages:
+  - name: EmployeePayroll
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
 - serviceName: project.serengeti_github_2603.integrations:github_package_fs
   packages:
   - name: Serengeti_github_2603Project
     version: "1.0"
+  - name: EmployeePayroll
+    version: "1.0"
+  - name: InvalidPackage
+    version: "1.0"
   - name: CurrentDatePackage
     version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
 - serviceName: new_folder:new_flowservice
   packages:
   - name: CurrentDatePackage
@@ -42,5 +94,13 @@ services:
   packages:
   - name: Serengeti_github_2603Project
     version: "1.0"
+  - name: EmployeePayroll
+    version: "1.0"
+  - name: InvalidPackage
+    version: "1.0"
   - name: CurrentDatePackage
     version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
