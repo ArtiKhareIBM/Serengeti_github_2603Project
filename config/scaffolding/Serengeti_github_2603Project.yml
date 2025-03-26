@@ -8,16 +8,29 @@ packages:
   gitUsername: ArtiKhareIBM
   gitBranch: main
 - name: CurrentDatePackage
+  version: "1.0"
   gitServerName: srcGithubCtrl_Arti
   gitUrl: https://github.com/ArtiKhareIBM
   gitUsername: ArtiKhareIBM
   gitBranch: main
 services:
-- serviceName: project.serengeti_github_2603.integrations:github_repo_2603
+- serviceName: project.serengeti_github_2603.integrations:github_package_fs
   packages:
   - name: Serengeti_github_2603Project
+    version: "1.0"
+  - name: CurrentDatePackage
+    version: "1.0"
+- serviceName: new_folder:new_flowservice
+  packages:
+  - name: CurrentDatePackage
     version: "1.0"
 - serviceName: pub.date:getCurrentDate
   packages:
   - name: WmPublic
     version: 11.1.0.0.2043
+- serviceName: project.serengeti_github_2603.integrations:github_repo_2603
+  packages:
+  - name: Serengeti_github_2603Project
+    version: "1.0"
+  - name: CurrentDatePackage
+    version: "1.0"
