@@ -7,3 +7,12 @@ packages:
   gitUrl: https://github.com/ArtiKhareIBM
   gitUsername: ArtiKhareIBM
   gitBranch: main
+services:
+- serviceName: project.serengeti_github_2603.integrations:github_repo_2603
+  packages:
+  - name: Serengeti_github_2603Project
+    version: "1.0"
+- serviceName: pub.date:getCurrentDate
+  packages:
+  - name: WmPublic
+    version: 11.1.0.0.2043
