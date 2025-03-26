@@ -18,6 +18,11 @@ packages:
   gitUrl: https://github.com/ArtiKhareIBM
   gitUsername: ArtiKhareIBM
   gitBranch: main
+- name: EmployeePayroll
+  gitServerName: srcCtrl_AzRepo_Arti
+  gitUrl: https://dev.azure.com/y508839/EmployeePayroll/_git
+  gitUsername: y508839
+  gitBranch: main
 services:
 - serviceName: project.serengeti_github_2603.integrations:github_package_fs
   packages:
